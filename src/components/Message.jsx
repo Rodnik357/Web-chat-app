@@ -9,9 +9,13 @@ const Message = ({ message }) => {
 
   return (
     <div className={`ChatBubble ${message.uid === user.uid ? "right" : ""}`}>
-      <img className="ChatBubbleLeft" src={message.avatar} alt="user avatar" />
+      <img
+        className="ChatBubble__Left"
+        src={message.avatar}
+        alt="user avatar"
+      />
 
-      <div className="ChatBubbleRight">
+      <div className="ChatBubble__Right">
         <p className="UserName">{message.name}</p>
         <p className="UserMessage">{message.text}</p>
       </div>

@@ -13,9 +13,11 @@ body {
   font-family: sans-serif;
 }
 
+button,
+input {
+  cursor: pointer;
+}
 
-
-/* ====================== APP.JS ======================== */
 .App {
   width: 100%;
   min-height: 100vh;
@@ -23,8 +25,7 @@ body {
   color: #4c768d;
 }
 
-/* ====================== NAVBAR ======================== */
-
+/* NAVBAR */
 .Navbar {
   padding: 10px 30px;
   display: flex;
@@ -34,21 +35,14 @@ body {
   color: #242443;
   height: 60px;
 }
-
 .SignInButton {
   border: none;
   background-color: transparent;
+}
+.SignInButton > img {
   height: 30px;
   width: auto;
 }
-
-.SignInWrapper {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
-  min-width: 80px;
-}
-
 .SignOutButton {
   padding: 5px 10px;
   border-radius: 5px;
@@ -57,13 +51,19 @@ body {
   background-color: #1c2c4c;
   font-weight: 600;
 }
-  
-.SignOutButton:hover {
-    background-color: rgb(238, 249, 175);
-  }
 
-/* ============================== CHATBOX ================================= */
+/* WELCOME */
+.Welcome {
+  padding: 30px;
+  text-align: center;
+  margin-top: 40px;
+  color: #7cc5d9;
+}
+.Welcome :is(h2, p, img) {
+  margin-bottom: 20px;
+}
 
+/* chat component */
 .MessagesWrapper {
   padding: 30px;
   margin-bottom: 60px;
@@ -80,13 +80,13 @@ body {
   align-items: flex-start;
   margin-bottom: 20px;
 }
-.ChatBubble {
+.ChatBubble.right {
   margin-left: auto;
   border-radius: 20px 20px 0 20px;
   background-color: #fff;
   box-shadow: -2px 2px 1px 1px #88dded;
 }
-.ChatBubbleLeft {
+.ChatBubble__Left {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -106,21 +106,7 @@ body {
   text-align: right;
 }
 
-
-/* ============================== WELCOME ================================ */
-
-.welcome {
-  padding: 30px;
-  text-align: center;
-  margin-top: 40px;
-  color: #7cc5d9;
-}
-.welcome :is(h2, p, img) {
-  margin-bottom: 20px;
-}
-
-/* ============================== SEND MESSAGE ============================= */
-
+/* send message */
 .SendMessage {
   position: fixed;
   bottom: 0px;
