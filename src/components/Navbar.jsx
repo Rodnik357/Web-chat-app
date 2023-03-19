@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import logo from "../images/trachat.png";
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
@@ -19,7 +20,10 @@ const Navbar = () => {
 
   return (
     <div className="Navbar">
-      <h1 className="NavbarHeading">Trachat</h1>
+      <div className="NavbarLogoAndHeading">
+        <img src={logo} className="NavbarLogo" alt="Trachat logo" />
+        <h1 className="NavbarHeading">Trachat</h1>
+      </div>
       {user ? (
         <button onClick={signOut} className="SignOutButton" type="button">
           Sign out

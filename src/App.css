@@ -25,15 +25,26 @@ input {
   color: #4c768d;
 }
 
-/* NAVBAR */
+/* ================================================= NAVBAR ========================================== */
 .Navbar {
-  padding: 10px 30px;
+  padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #4c768d;
   color: #242443;
   height: 60px;
+  width: 100%;
+}
+.NavbarHeading {
+  padding-top: 10px;
+}
+.NavbarLogoAndHeading {
+  display: flex;
+  flex-direction: row;
+}
+.NavbarLogo {
+  height: 55px;
 }
 .SignInButton {
   border: none;
@@ -52,7 +63,7 @@ input {
   font-weight: 600;
 }
 
-/* WELCOME */
+/* ================================================ WELCOME =============================================== */
 .Welcome {
   padding: 30px;
   text-align: center;
@@ -63,7 +74,7 @@ input {
   margin-bottom: 20px;
 }
 
-/* chat component */
+/* ================================================= CHATBOX ================================================= */
 .MessagesWrapper {
   padding: 30px;
   margin-bottom: 60px;
@@ -106,7 +117,7 @@ input {
   text-align: right;
 }
 
-/* send message */
+/* ======================================= SEND MESSAGE ============================================ */
 .SendMessage {
   position: fixed;
   bottom: 0px;
