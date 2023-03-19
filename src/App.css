@@ -13,16 +13,15 @@ body {
   font-family: sans-serif;
 }
 
-button,
-input {
+button {
   cursor: pointer;
 }
 
 .App {
   width: 100%;
   min-height: 100vh;
-  background-color: #1c2c4c;
-  color: #4c768d;
+  background-color: #4C2A85;
+  color: #320E3B;
 }
 
 /* ================================================= NAVBAR ========================================== */
@@ -31,35 +30,44 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #4c768d;
+  background-color: #6B7FD7;
   color: #242443;
   height: 60px;
   width: 100%;
 }
+
 .NavbarHeading {
   padding-top: 10px;
+  color: #320E3B;
 }
+
 .NavbarLogoAndHeading {
   display: flex;
   flex-direction: row;
 }
+
 .NavbarLogo {
   height: 55px;
+  
 }
+
+
 .SignInButton {
   border: none;
   background-color: transparent;
 }
+
 .SignInButton > img {
   height: 30px;
   width: auto;
 }
+
 .SignOutButton {
   padding: 5px 10px;
   border-radius: 5px;
   color: #88dded;
   border: 1px solid #1c2c4c;
-  background-color: #1c2c4c;
+  background-color: #320E3B;
   font-weight: 600;
 }
 
@@ -70,8 +78,22 @@ input {
   margin-top: 40px;
   color: #7cc5d9;
 }
+
 .Welcome :is(h2, p, img) {
   margin-bottom: 20px;
+}
+
+.Logo {
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 /* ================================================= CHATBOX ================================================= */
@@ -79,39 +101,45 @@ input {
   padding: 30px;
   margin-bottom: 60px;
 }
+
 .ChatBubble {
   border-radius: 20px 20px 20px 0;
   padding: 15px;
-  background-color: #7cc5d9;
+  background-color: #BCEDF6;
   color: #1c2c4c;
   width: max-content;
   max-width: calc(100% - 50px);
-  box-shadow: -2px 2px 1px 1px #4c768d;
+  box-shadow: -2px 2px 1px 1px #6B7FD7;
   display: flex;
   align-items: flex-start;
   margin-bottom: 20px;
 }
+
 .ChatBubble.right {
   margin-left: auto;
   border-radius: 20px 20px 0 20px;
   background-color: #fff;
-  box-shadow: -2px 2px 1px 1px #88dded;
+  box-shadow: -2px 2px 1px 1px #DDFBD2;
 }
+
 .ChatBubble__Left {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   margin-right: 10px;
 }
+
 .UserName {
   font-weight: bold;
   margin-bottom: 5px;
   font-size: 0.9rem;
-  color: #1c2c4c;
+  color: #320E3B;
 }
+
 .UserMessage {
   word-break: break-all;
 }
+
 .MessageTime {
   display: block;
   text-align: right;
@@ -123,9 +151,10 @@ input {
   bottom: 0px;
   width: 100%;
   padding: 20px 30px;
-  background-color: #4c768d;
+  background-color: #6B7FD7;
   display: flex;
 }
+
 .SendMessage > input {
   height: 40px;
   padding: 10px 10px;
@@ -136,20 +165,27 @@ input {
   color: #1c2c4c;
   font-size: 1rem;
 }
+
 .SendMessage > input:placeholder {
   color: #ddd;
 }
+
 .SendMessage > :is(input, button):focus {
   outline: none;
   border-bottom: 1px solid #7cc5d9;
 }
+
 .SendMessage > button {
   width: 70px;
   height: 40px;
   padding: 5px 10px;
   border-radius: 0 5px 5px 0;
   color: #242443;
-  border: 1px solid #7cc5d9;
-  background-color: #7cc5d9;
+  border: 1px solid #DDFBD2;
+  background-color: #DDFBD2;
   font-weight: 600;
+}
+
+.SendMessage > button:hover {
+  background-color: #BCEDF6;
 }
